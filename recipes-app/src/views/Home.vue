@@ -1,9 +1,12 @@
 <template>
-  <div class="bg-red-500">Home</div>
+  <input type="text" name="" />
 </template>
 
-<script>
-export default {};
+<script setup>
+import { computed } from "vue";
+import store from "../store";
+
+const meals = computed(() => store.state.meals);
 </script>
 
 <style></style>
