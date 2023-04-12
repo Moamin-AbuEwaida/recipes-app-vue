@@ -28,18 +28,7 @@
             {{ meal.strInstructions }}
           </p>
           <div class="flex items-center justify-between">
-            <a
-              :href="meal.strYoutube"
-              target="_blank"
-              class="px-3 py-2 rounded border-2 text-white border-red-600 bg-red-500 hover:bg-white hover:text-red-500 transition-colors"
-              >YouTube</a
-            >
-
-            <!-- <router-link
-              to="/"
-              class="px-3 py-2 rounded border-2 text-white border-purple-600 bg-purple-500 hover:bg-white hover:text-purple-500 transition-colors"
-              >View</router-link
-            > -->
+            <YouTubeButton :href="meal.strYoutube">Youtube</YouTubeButton>
           </div>
         </div>
       </div>
@@ -51,6 +40,7 @@
 import { ref, computed, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import store from "../store";
+import YouTubeButton from "../components/YouTubeButton.vue";
 
 const keyword = ref("");
 const meals = computed(() => store.state.searchedMeals);
