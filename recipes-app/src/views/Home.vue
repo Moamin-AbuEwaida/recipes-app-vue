@@ -5,7 +5,6 @@
 <script setup>
 import { computed, onMounted, ref } from "vue";
 import axiosClient from "../axiosClient";
-import MealsByLetter from "./MealsByLetter.vue";
 
 const ingredients = ref([]);
 
